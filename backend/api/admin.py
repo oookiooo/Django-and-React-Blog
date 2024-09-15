@@ -8,7 +8,6 @@ class UserAdmin(admin.ModelAdmin):
 class ProfileAdmin(admin.ModelAdmin):
     search_fields  = ['user']
     list_display = ['thumbnail', 'user', 'full_name']
-            #asdasdasdasdasdasdsad
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ["title"]
 
