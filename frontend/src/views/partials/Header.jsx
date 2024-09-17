@@ -104,10 +104,10 @@ function Header() {
                                 ) : (
                                     <>
                                         <Link to={"/register/"} className="btn btn-success" href="dashboard.html">
-                                            Register <i className="fas fa-user-plus"></i>
+                                            Rejestracja <i className="fas fa-user-plus"></i>
                                         </Link>
                                         <Link to={"/login/"} className="btn btn-success ms-2" href="dashboard.html">
-                                            Login <i className="fas fa-sign-in-alt"></i>
+                                            Logowanie <i className="fas fa-sign-in-alt"></i>
                                         </Link>
                                     </>
                                 )}

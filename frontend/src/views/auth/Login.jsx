@@ -30,7 +30,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-
+        console.log("xd");
         const { error } = await login(bioData.email, bioData.password);
         if (error) {
             alert(JSON.stringify(error));
