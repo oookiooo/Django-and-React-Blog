@@ -102,7 +102,7 @@ function Header() {
                     </Link>
 
                     <Link to={"/rooms/"} className="btn btn-danger ms-2" href="dashboard.html">
-                      Logout <i className="fas fa-sign-out-alt"></i>
+                      Rooms <i className="fas fa-sign-out-alt"></i>
                     </Link>
                   </>
                 ) : (
