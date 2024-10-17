@@ -27,6 +27,11 @@ class User(AbstractUser):
             self.username = email_username  
     
         super(User, self).save(*args, **kwargs)
+class Rooms(models.Model):
+    name = models.CharField(max_length=100,null=True,blank=True)
+    users = models.ManyToManyField(User)
+    def __str__(self):
+        return self.name
 
 
 class Profile(models.Model):
