@@ -33,6 +33,12 @@ class Rooms(models.Model):
     def __str__(self):
         return self.name
 
+def create_rooms_profile(sender, instance, created, **kwargs):
+    if created:
+        Rooms.objects.create(rooms=instance)
+
+def save_rooms_profile(sender, instance, **kwargs):
+    instance.rooms.file.save()
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -63,6 +69,7 @@ class Profile(models.Model):
     
 
 def create_user_profile(sender, instance, created, **kwargs):
+    print("xd")
     if created:
         Profile.objects.create(user=instance)
 

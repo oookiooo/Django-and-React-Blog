@@ -84,7 +84,34 @@ export const register = async (full_name, email, password, password2) => {
     };
   }
 };
+export const addRoom = async (roomName,userid) => {
+  try {
+    // Making a POST request to register a new user
+    const { data } = await axios.post(`room/add/${userid}/`, {
+      full_name,
 
+    });
+    console.log(userid);
+
+    // Logging in the newly registered user and displaying success toast
+    await login(email, password);
+
+    // Displaying a success toast notification
+    Toast.fire({
+      icon: "success",
+      title: "Room added!",
+    });
+
+    // Returning data and error information
+    return { data, error: null };
+  } catch (error) {
+    // Handling errors and returning data and error information
+    return {
+      data: null,
+      error: error.response.data || "Something went wrong",
+    };
+  }
+};
 // Function to handle user logout
 export const logout = () => {
   // Removing access and refresh tokens from cookies, resetting user state, and displaying success toast
